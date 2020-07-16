@@ -1,14 +1,34 @@
 ---
-layout: post
-image: /images/uwmodel.jpg
-summary: Use computing power to choose the best fit model.
-excerpt: Use computing power to choose the best fit model.
-time: 2 minute read
-title: Quick guide to using multi-model inference in R
+title: A quick guide to using multi-model inference for model selecetion in R
 output: rmarkdown::github_document
 ---
+layout: post
+image: /images/Electoral_Map_States.png
+summary: Use computing power to choose the best fit model.
+excerpt: Use computing power to choose the best fit model.
+time: 3 minute read
+title: A quick guide to using multi-model inference for model selecetion in R
+
 <br>
 **Use computing power to choose the best fit model.**
+
+Model selection is a longstanding issue in statistical analysis. How should we choose the best model? Kenneth Burnham and David Anderson [argue we should be using insight from information theory to select models](https://www.springer.com/gp/book/9780387953649). Their approach is called Multi-Model Inference.
+
+<br>
+<br>
+
+***
+
+## How does multi-model inference work?
+
+Very simply, multi-model inference works by testing all possible combinations of variables in a model and ranking them by their fit. Ranking is done using the [Aikaike Information Criterion (AIC)](https://en.wikipedia.org/wiki/Akaike_information_criterion). AIC is a measure of model fit, taking into account model simplicity. The aim of multi-model inference and AIC is to determine the best fit model using the fewest variables.
+
+<br>
+<br>
+
+***
+
+## An simple example of multi-model inference in R
 
 
 ```{r setup, include=FALSE}
