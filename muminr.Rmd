@@ -32,11 +32,15 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 The package MuMIn has everything needed to perform multi-model inference. To test it out, we can use data from the University of Wisconsin County Health Project. This dataset contains health data from six states in the U.S.
 
+<br>
+
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 packages <- c("readr", "MuMIn", "lme4")                 # packages you will need
 lapply(packages, require, character.only = TRUE)        # install and / or load packages
 dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/healthdata.csv")))
 ```
+
+<br>
 
 We will build models testing whether diabetes prevalence in counties in these states is related to the following factors:
  
@@ -48,31 +52,38 @@ We will build models testing whether diabetes prevalence in counties in these st
  
 We begin by building a model with these fixed effects and their two-way interactions, using county and state as random effects. We can think of this model as the "global" model.
 
+<br>
+
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
-mod <- lme(diabetesprevalence ~ 
-           smoking +
-           foodenvironment +
-           physicalinactivity +
-           accesstoexercise +
-           excessivedrinking +
-           smoking:foodenvironment +
-           smoking:physicalinactivity +
-           smoking:accesstoexercise +
-           smoking:excessivedrinking +
-           foodenvironment:physicalinactivity +
-           foodenvironment:accesstoexercise +
-           foodenvironment:excessivedrinking +
-           physicalinactivity:accesstoexercise +
-           physicalinactivity:excessivedrinking +
-           accesstoexercise:excessivedrinking,
-           random = ~ 1 | state/county, data = dat, method = "ML")
+mod <- lme(
+          diabetesprevalence ~ 
+            smoking +
+            foodenvironment +
+            physicalinactivity +
+            accesstoexercise +
+            excessivedrinking +
+              smoking:foodenvironment +
+              smoking:physicalinactivity +
+              smoking:accesstoexercise +
+              smoking:excessivedrinking +
+              foodenvironment:physicalinactivity +
+              foodenvironment:accesstoexercise +
+              foodenvironment:excessivedrinking +
+              physicalinactivity:accesstoexercise +
+              physicalinactivity:excessivedrinking +
+              accesstoexercise:excessivedrinking,
+          random = ~ 1 | state/county, data = dat, method = "ML"
+          )
+```
 
+<br>
 
+From the global model, we will use the dredge function to test every model with all possible combinations of the fixed effects.
 
+<br>
 
-modfit1 <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
-plot(modfit1, labAsExpr = TRUE)
-av <- model.avg(modfit1, subset = delta < 3)
+```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
+moddredge <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
 
 
 
@@ -86,12 +97,13 @@ r.squaredGLMM(bestmod)
 ptable <- cbind(coef(summary(bestmod)), Anova(bestmod, type = "III"), r.squaredGLMM(bestmod))
 ```
 
+We can create a plot showing model variables vs. average model AIC to get a sense of what factors are important. Then create a model average from the models with the lowest AIC. Typically, models are not thought to be different if they are within three AIC, so the model.avg function creates an average model from models within that range. 
 
 
-
-
-
-
+```{r}
+plot(moddredge, labAsExpr = TRUE)
+av <- model.avg(moddredge, subset = delta < 3)
+```
 
 
 
