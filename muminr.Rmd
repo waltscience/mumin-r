@@ -30,7 +30,7 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 ## Using multi-model inference in R
 
-The package MuMIn has everything needed to perform multi-model inference. To test it out, we can use data from the University of Wisconsin County Health Project.
+The package MuMIn has everything needed to perform multi-model inference. To test it out, we can use data from the University of Wisconsin County Health Project. This dataset contains health data from six states in the U.S.
 
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 packages <- c("readr", "MuMIn", "lme4")                 # packages you will need
@@ -38,17 +38,15 @@ lapply(packages, require, character.only = TRUE)        # install and / or load 
 dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/healthdata.csv")))
 ```
 
-We will build models testing whether diabetes prevalence in a county is related to the following factors:
+We will build models testing whether diabetes prevalence in counties in these states is related to the following factors:
  
  * Smoking
  * Food environment index
  * Physical inactivity
  * Access to exercise opportunities
  * Excessive drinking prevalence
- * Driving alone to work
- * Population
  
-We begin by building a model with all the fixed effects and use county and state as random effects. We can think of this model as the "global" model.
+We begin by building a model with these fixed effects and their two-way interactions, using county and state as random effects. We can think of this model as the "global" model.
 
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 mod <- lme(diabetesprevalence ~ 
@@ -68,6 +66,10 @@ mod <- lme(diabetesprevalence ~
            physicalinactivity:excessivedrinking +
            accesstoexercise:excessivedrinking,
            random = ~ 1 | state/county, data = dat, method = "ML")
+
+
+
+
 modfit1 <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
 plot(modfit1, labAsExpr = TRUE)
 av <- model.avg(modfit1, subset = delta < 3)
