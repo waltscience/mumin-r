@@ -32,10 +32,10 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 The package MuMIn has everything needed to perform multi-model inference. To test it out, we can use data from the University of Wisconsin County Health Project.
 
-```{r}
+```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 packages <- c("readr", "MuMIn", "lme4")                 # packages you will need
 lapply(packages, require, character.only = TRUE)        # install and / or load packages
-dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/countyhealth/master/healthdata.csv")))
+dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/healthdata.csv")))
 ```
 
 We will build models testing whether diabetes prevalence in a county is related to the following factors:
@@ -48,31 +48,38 @@ We will build models testing whether diabetes prevalence in a county is related 
  * Driving alone to work
  * Population
  
-We begin by building a model with all the fixed effect and use county and state as random effects. We can think of this model as the "global" model.
+We begin by building a model with all the fixed effects and use county and state as random effects. We can think of this model as the "global" model.
 
-```{r}
+```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
+mod <- lme(diabetesprevalence ~ 
+           smoking + 
+           foodenvironment +
+           physicalinactivity +
+           accesstoexercise +
+           excessivedrinking +
+           drivingalone +
+           population,
+           random = ~ 1 | state/county, data = dat, method = "ML")
+modfit1 <- dredge(mod, fixed=c("N","P"), extra = c("R^2", F = function(x)
+  summary(x)$fstatistic[[1]]))
+plot(modfit1, labAsExpr = TRUE)
+av <- model.avg(modfit1, subset = delta < 3)
+mfilnam <- paste(outpath, respname, "_modelavtable.csv", sep = "")
+write.csv(av[2], mfilnam)
 
 ```
 
 
 
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
