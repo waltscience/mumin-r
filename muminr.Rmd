@@ -28,11 +28,12 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 ***
 
-## An simple example of multi-model inference in R
+## Using multi-model inference in R
 
+We can use the MuMIn package 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r  include=FALSE}
+y <- read.csv(text=getURL("https://raw.github.com/aronlindberg/latent_growth_classes/master/LGC_data.csv"))
 ```
 
 ## R Markdown
