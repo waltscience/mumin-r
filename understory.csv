@@ -1,0 +1,393 @@
+plot,n,c,frame,species,count
+3,0,1,3_6,Sweet birch,1
+3,0,1,3_6,Yellow-poplar,12
+3,0,1,3_6,Black cherry,5
+3,0,1,3_6,Sugar maple,1
+3,0,1,3_6,Unknown,1
+3,0,1,3_6,Blackberry,21
+3,0,1,3_6,Grapevine,4
+3,0,1,3_6,Nettles (stinging),21
+3,0,1,3_6,Blue cohosh,1
+3,0,1,3_6,Violets,35
+3,0,1,3_6,Black cohosh,7
+3,0,1,3_6,Twisted stalk,6
+3,0,1,3_6,Wild lily of the valley,1
+3,0,1,3_6,Sedge sp.,8
+3,0,1,3_8,Yellow-poplar,7
+3,0,1,3_8,Fire or pin cherry,3
+3,0,1,3_8,Black cherry,15
+3,0,1,3_8,Sugar maple,3
+3,0,1,3_8,Red maple,1
+3,0,1,3_8,Unknown,1
+3,0,1,3_8,Blackberry,10
+3,0,1,3_8,Grapevine,4
+3,0,1,3_8,Hercules club,1
+3,0,1,3_8,Nettles (stinging),14
+3,0,1,3_8,Violets,69
+3,0,1,3_8,Pokeweed,2
+3,0,1,3_8,Twisted stalk,1
+3,0,1,3_11,Sweet birch,2
+3,0,1,3_11,Yellow-poplar,8
+3,0,1,3_11,Fire or pin cherry,5
+3,0,1,3_11,Black cherry,3
+3,0,1,3_11,Blackberry,20
+3,0,1,3_11,Grapevine,6
+3,0,1,3_11,Hercules club,3
+3,0,1,3_11,Nettles (stinging),6
+3,0,1,3_11,Violets,29
+3,0,1,3_11,Black cohosh,1
+3,0,1,3_11,Touch-me-not,1
+3,0,1,3_11,Twisted stalk,2
+3,0,1,3_12,Sweet birch,1
+3,0,1,3_12,Yellow-poplar,4
+3,0,1,3_12,Fire or pin cherry,1
+3,0,1,3_12,Black cherry,6
+3,0,1,3_12,Blackberry,31
+3,0,1,3_12,Grapevine,3
+3,0,1,3_12,Nettles (stinging),8
+3,0,1,3_12,Christmas fern,7
+3,0,1,3_12,Violets,46
+3,0,1,3_12,Twisted stalk,1
+3,0,1,3_12,Aster,2
+3,0,1,3_12,Sedge sp.,4
+3,0,1,3_13,Northern red oak,1
+3,0,1,3_13,Yellow-poplar,6
+3,0,1,3_13,Black cherry,4
+3,0,1,3_13,Blackberry,27
+3,0,1,3_13,Grapevine,6
+3,0,1,3_13,Nettles (stinging),36
+3,0,1,3_13,Violets,15
+3,0,1,3_13,Touch-me-not,1
+3,0,1,3_13,Pokeweed,4
+3,0,1,3_13,Twisted stalk,1
+3,0,1,3_13,Grass,1
+3,0,1,3_13,Aster,1
+4,0,1,4_2,Sugar maple,4
+4,0,1,4_2,Red maple,1
+4,0,1,4_2,Grapevine,1
+4,0,1,4_2,Greenbrier,1
+4,0,1,4_2,Nettles (stinging),17
+4,0,1,4_2,White snakeroot,45
+4,0,1,4_2,Violets,60
+4,0,1,4_2,Black cohosh,1
+4,0,1,4_2,Deertongue grass,2
+4,0,1,4_2,Twisted stalk,2
+4,0,1,4_2,Knotweed ,1
+4,0,1,4_2,Sedge sp.,4
+4,0,1,4_2,Avens,1
+4,0,1,4_14,Yellow-poplar,5
+4,0,1,4_14,Sassafras,1
+4,0,1,4_14,Black cherry,7
+4,0,1,4_14,Sugar maple,1
+4,0,1,4_14,Red maple,2
+4,0,1,4_14,Unknown,6
+4,0,1,4_14,Blackberry,1
+4,0,1,4_14,Nettles (stinging),28
+4,0,1,4_14,White snakeroot,7
+4,0,1,4_14,Violets,29
+4,0,1,4_14,Black cohosh,8
+4,0,1,4_14,Bed straw,4
+4,0,1,4_14,Grass,12
+4,0,1,4_14,Sedge sp.,2
+4,0,1,4_14,Avens,1
+4,0,1,4_15,Yellow-poplar,2
+4,0,1,4_15,Black cherry,2
+4,0,1,4_15,Unknown,2
+4,0,1,4_15,Nettles (stinging),39
+4,0,1,4_15,Blue cohosh,3
+4,0,1,4_15,Violets,16
+4,0,1,4_15,Black cohosh,5
+4,0,1,4_15,Indian turnip,3
+4,0,1,4_15,Grass,28
+4,0,1,4_16,Chestnut oak,1
+4,0,1,4_16,Northern red oak,1
+4,0,1,4_16,Yellow-poplar,13
+4,0,1,4_16,Sugar maple,4
+4,0,1,4_16,White ash,1
+4,0,1,4_16,Unknown,4
+4,0,1,4_16,Unknown,4
+4,0,1,4_16,Blackberry,5
+4,0,1,4_16,Grapevine,2
+4,0,1,4_16,Nettles (stinging),34
+4,0,1,4_16,White snakeroot,30
+4,0,1,4_16,Violets,109
+4,0,1,4_16,Bellwort,2
+4,0,1,4_16,Bed straw,6
+4,0,1,4_16,Twisted stalk,1
+4,0,1,4_16,Wild licorice,1
+4,0,1,4_16,Knotweed ,3
+4,0,1,4_16,Sedge sp.,3
+4,0,1,4_16,Avens,3
+4,0,1,4_17,Sweet birch,1
+4,0,1,4_17,Yellow-poplar,10
+4,0,1,4_17,Black cherry,2
+4,0,1,4_17,Black locust,1
+4,0,1,4_17,Red maple,2
+4,0,1,4_17,Unknown,1
+4,0,1,4_17,Nettles (stinging),23
+4,0,1,4_17,Christmas fern,8
+4,0,1,4_17,Violets,25
+4,0,1,4_17,Black cohosh,2
+4,0,1,4_17,Bed straw,5
+4,0,1,4_17,Touch-me-not,1
+4,0,1,4_17,Aster,1
+4,0,1,4_17,Sedge sp.,4
+9,0,1,9_2,Blackberry,13
+9,0,1,9_2,Grapevine,4
+9,0,1,9_2,Violets,5
+9,0,1,9_2,Pokeweed,1
+9,0,1,9_2,Grass,5
+9,0,1,9_5,Lychopodium spp.,1
+9,0,1,9_5,Yellow birch,1
+9,0,1,9_5,Fraser magnolia,3
+9,0,1,9_5,Yellow-poplar,2
+9,0,1,9_5,Black locust,2
+9,0,1,9_5,White ash,1
+9,0,1,9_5,Unknown,1
+9,0,1,9_5,Blackberry,9
+9,0,1,9_5,Grapevine,1
+9,0,1,9_5,Greenbrier,3
+9,0,1,9_5,Christmas fern,5
+9,0,1,9_5,Grass,3
+9,0,1,9_9,Yellow-poplar,1
+9,0,1,9_9,Black locust,6
+9,0,1,9_9,Blackberry,16
+9,0,1,9_9,Hercules club,1
+9,0,1,9_11,Yellow-poplar,1
+9,0,1,9_11,Black cherry,1
+9,0,1,9_11,Blackberry,11
+9,0,1,9_11,Pokeweed,2
+9,0,1,9_18,Fraser magnolia,5
+9,0,1,9_18,Yellow-poplar,1
+9,0,1,9_18,Blackberry,3
+9,0,1,9_18,Hercules club,2
+9,0,1,9_18,Violets,1
+9,0,1,9_18,Clematis/Virgin’s bower,1
+12,0,1,12_2,Sweet birch,2
+12,0,1,12_2,Yellow-poplar,4
+12,0,1,12_2,Fire or pin cherry,1
+12,0,1,12_2,Black cherry,2
+12,0,1,12_2,Blackberry,19
+12,0,1,12_2,Grapevine,18
+12,0,1,12_2,Greenbrier,1
+12,0,1,12_2,Violets,6
+12,0,1,12_2,Indian turnip,3
+12,0,1,12_2,Deertongue grass,5
+12,0,1,12_2,Mandarin,4
+12,0,1,12_3,Yellow-poplar,10
+12,0,1,12_3,Sassafras,2
+12,0,1,12_3,Fire or pin cherry,4
+12,0,1,12_3,Black cherry,5
+12,0,1,12_3,Red maple,2
+12,0,1,12_3,Blackberry,19
+12,0,1,12_3,Grapevine,13
+12,0,1,12_3,Violets,5
+12,0,1,12_3,Deertongue grass,2
+12,0,1,12_3,Twisted stalk,3
+12,0,1,12_6,Yellow-poplar,6
+12,0,1,12_6,Sassafras,2
+12,0,1,12_6,Fire or pin cherry,2
+12,0,1,12_6,Black cherry,3
+12,0,1,12_6,Blackberry,19
+12,0,1,12_6,Grapevine,2
+12,0,1,12_6,Nettles (stinging),4
+12,0,1,12_6,New York fern,10
+12,0,1,12_6,Violets,13
+12,0,1,12_6,Pokeweed,1
+12,0,1,12_6,Common cinquefoil,6
+12,0,1,12_6,Deertongue grass,3
+12,0,1,12_6,Twisted stalk,1
+12,0,1,12_6,Sedge sp.,1
+12,0,1,12_8,Sweet birch,1
+12,0,1,12_8,Yellow-poplar,4
+12,0,1,12_8,Fire or pin cherry,6
+12,0,1,12_8,Black cherry,3
+12,0,1,12_8,Red maple,1
+12,0,1,12_8,Blackberry,33
+12,0,1,12_8,Grapevine,14
+12,0,1,12_8,Hercules club,1
+12,0,1,12_8,Violets,16
+12,0,1,12_11,Yellow-poplar,1
+12,0,1,12_11,Black cherry,10
+12,0,1,12_11,Blackberry,14
+12,0,1,12_11,Grapevine,18
+12,0,1,12_11,Nettles (stinging),2
+12,0,1,12_11,Upright smilax,2
+12,0,1,12_11,Spinulose shield fern,8
+1,1,0,1_3,Yellow-poplar,2
+1,1,0,1_3,Black cherry,11
+1,1,0,1_3,Unknown,1
+1,1,0,1_3,Blackberry,23
+1,1,0,1_3,Grapevine,6
+1,1,0,1_3,Hercules club,1
+1,1,0,1_3,Nettles (stinging),26
+1,1,0,1_3,Pokeweed,1
+1,1,0,1_6,Fire or pin cherry,3
+1,1,0,1_6,Black cherry,12
+1,1,0,1_6,White ash,2
+1,1,0,1_6,Blackberry,18
+1,1,0,1_6,Grapevine,2
+1,1,0,1_6,Nettles (stinging),29
+1,1,0,1_6,Violets,2
+1,1,0,1_6,Pokeweed,13
+1,1,0,1_8,Northern red oak,5
+1,1,0,1_8,Fire or pin cherry,1
+1,1,0,1_8,Black cherry,20
+1,1,0,1_8,Blackberry,31
+1,1,0,1_8,Hercules club,1
+1,1,0,1_8,Nettles (stinging),19
+1,1,0,1_8,Violets,13
+1,1,0,1_8,Bed straw,1
+1,1,0,1_8,Touch-me-not,1
+1,1,0,1_8,Pokeweed,1
+1,1,0,1_10,Yellow-poplar,1
+1,1,0,1_10,Fire or pin cherry,1
+1,1,0,1_10,Black cherry,6
+1,1,0,1_10,Blackberry,13
+1,1,0,1_10,Grapevine,2
+1,1,0,1_10,Hercules club,3
+1,1,0,1_10,Nettles (stinging),6
+1,1,0,1_10,Violets,4
+1,1,0,1_10,Grass,2
+1,1,0,1_18,Cucumbertree,2
+1,1,0,1_18,Black cherry,9
+1,1,0,1_18,Red maple,3
+1,1,0,1_18,Blackberry,22
+1,1,0,1_18,Grapevine,2
+1,1,0,1_18,Greenbrier,2
+1,1,0,1_18,Hay-scented fern,16
+1,1,0,1_18,Pokeweed,2
+5,1,0,5_7,Sweet birch,1
+5,1,0,5_7,Northern red oak,1
+5,1,0,5_7,Yellow-poplar,4
+5,1,0,5_7,Black cherry,4
+5,1,0,5_7,Unknown,1
+5,1,0,5_7,Blackberry,4
+5,1,0,5_7,Grapevine,2
+5,1,0,5_7,Nettles (stinging),9
+5,1,0,5_7,Christmas fern,2
+5,1,0,5_7,New York fern,6
+5,1,0,5_7,Violets,20
+5,1,0,5_7,Deertongue grass,7
+5,1,0,5_7,Aster,16
+5,1,0,5_7,Sedge sp.,2
+5,1,0,5_8,Yellow-poplar,8
+5,1,0,5_8,Unknown,2
+5,1,0,5_8,Blackberry,21
+5,1,0,5_8,Grapevine,16
+5,1,0,5_8,Nettles (stinging),5
+5,1,0,5_8,Violets,23
+5,1,0,5_8,Bed straw,2
+5,1,0,5_8,Indian turnip,2
+5,1,0,5_8,Pokeweed,1
+5,1,0,5_8,Twisted stalk,4
+5,1,0,5_8,Grass,6
+5,1,0,5_8,Upright smilax,1
+5,1,0,5_8,Aster,1
+5,1,0,5_10,Sweet birch,3
+5,1,0,5_10,Yellow-poplar,2
+5,1,0,5_10,Black cherry,5
+5,1,0,5_10,White ash,1
+5,1,0,5_10,Blackberry,32
+5,1,0,5_10,Grapevine,7
+5,1,0,5_10,Nettles (stinging),3
+5,1,0,5_10,Violets,23
+5,1,0,5_10,Indian turnip,1
+5,1,0,5_10,Deertongue grass,8
+5,1,0,5_10,Aster,1
+5,1,0,5_10,Sedge sp.,1
+5,1,0,5_18,Sweet birch,3
+5,1,0,5_18,Yellow-poplar,10
+5,1,0,5_18,Fire or pin cherry,4
+5,1,0,5_18,Black cherry,4
+5,1,0,5_18,Sugar maple,2
+5,1,0,5_18,Striped maple,1
+5,1,0,5_18,Blackberry,11
+5,1,0,5_18,Grapevine,6
+5,1,0,5_18,Nettles (stinging),4
+5,1,0,5_18,Christmas fern,2
+5,1,0,5_18,White snakeroot,2
+5,1,0,5_18,Violets,32
+5,1,0,5_18,Twisted stalk,1
+5,1,0,5_20,Yellow-poplar,2
+5,1,0,5_20,Sassafras,4
+5,1,0,5_20,Black cherry,10
+5,1,0,5_20,Sugar maple,1
+5,1,0,5_20,Red maple,3
+5,1,0,5_20,Unknown,1
+5,1,0,5_20,Blackberry,6
+5,1,0,5_20,Grapevine,8
+5,1,0,5_20,New York fern,1
+5,1,0,5_20,Violets,23
+5,1,0,5_20,Indian turnip,2
+5,1,0,5_20,Grass,2
+8,1,0,8_3,Sweet birch,6
+8,1,0,8_3,Yellow birch,2
+8,1,0,8_3,Cucumbertree,1
+8,1,0,8_3,Fraser magnolia,2
+8,1,0,8_3,Yellow-poplar,3
+8,1,0,8_3,Striped maple,1
+8,1,0,8_3,Red maple,2
+8,1,0,8_3,Blackberry,22
+8,1,0,8_3,Grapevine,1
+8,1,0,8_3,Violets,20
+8,1,0,8_3,Indian turnip,11
+8,1,0,8_14,Unknown,1
+8,1,0,8_16,Sweet birch,5
+8,1,0,8_16,Fraser magnolia,3
+8,1,0,8_16,Red maple,3
+8,1,0,8_16,Blackberry,2
+8,1,0,8_16,Greenbrier,2
+8,1,0,8_16,Greenbrier,2
+8,1,0,8_16,New York fern,7
+8,1,0,8_16,Violets,2
+8,1,0,8_17,Sweet birch,2
+8,1,0,8_17,Fraser magnolia,1
+8,1,0,8_17,Yellow-poplar,1
+8,1,0,8_17,Sassafras,1
+8,1,0,8_17,Black cherry,2
+8,1,0,8_17,Red maple,6
+8,1,0,8_17,Unknown,1
+8,1,0,8_17,Blackberry,2
+8,1,0,8_17,Greenbrier,9
+8,1,0,8_17,Violets,4
+8,1,0,8_19,Eastern hemlock,1
+8,1,0,8_19,Sweet birch,8
+8,1,0,8_19,Chestnut oak,2
+8,1,0,8_19,Red maple,3
+8,1,0,8_19,Blackberry,1
+8,1,0,8_19,Greenbrier,2
+10,1,0,10_1,Sweet birch,2
+10,1,0,10_1,Yellow-poplar,4
+10,1,0,10_1,Sassafras,1
+10,1,0,10_1,Blackberry,23
+10,1,0,10_1,Grapevine,9
+10,1,0,10_1,Greenbrier,6
+10,1,0,10_1,Indian turnip,2
+10,1,0,10_4,Sweet birch,1
+10,1,0,10_4,Yellow birch,1
+10,1,0,10_4,Yellow-poplar,1
+10,1,0,10_4,Sassafras,2
+10,1,0,10_4,Fire or pin cherry,2
+10,1,0,10_4,Black cherry,1
+10,1,0,10_4,Blackberry,12
+10,1,0,10_4,Pokeweed,2
+10,1,0,10_9,Sweet birch,1
+10,1,0,10_9,Yellow-poplar,2
+10,1,0,10_9,Black locust,4
+10,1,0,10_9,Sugar maple,13
+10,1,0,10_9,White ash,1
+10,1,0,10_9,Blackberry,9
+10,1,0,10_9,Grapevine,1
+10,1,0,10_9,Christmas fern,2
+10,1,0,10_9,Pokeweed,7
+10,1,0,10_16,Black cherry,1
+10,1,0,10_16,Blackberry,9
+10,1,0,10_16,Greenbrier,1
+10,1,0,10_20,Northern red oak,1
+10,1,0,10_20,Yellow-poplar,1
+10,1,0,10_20,Striped maple,1
+10,1,0,10_20,Blackberry,13
+10,1,0,10_20,Grapevine,6
+10,1,0,10_20,Hercules club,1
+10,1,0,10_20,Spicebush,1
