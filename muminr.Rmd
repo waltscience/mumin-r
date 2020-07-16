@@ -60,8 +60,7 @@ mod <- lme(diabetesprevalence ~
            drivingalone +
            population,
            random = ~ 1 | state/county, data = dat, method = "ML")
-modfit1 <- dredge(mod, fixed=c("N","P"), extra = c("R^2", F = function(x)
-  summary(x)$fstatistic[[1]]))
+modfit1 <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
 plot(modfit1, labAsExpr = TRUE)
 av <- model.avg(modfit1, subset = delta < 3)
 mfilnam <- paste(outpath, respname, "_modelavtable.csv", sep = "")
