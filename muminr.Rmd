@@ -30,10 +30,13 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 ## Using multi-model inference in R
 
-We can use the MuMIn package 
+I will use data from 
 
 ```{r  include=FALSE}
-y <- read.csv(text=getURL("https://raw.github.com/aronlindberg/latent_growth_classes/master/LGC_data.csv"))
+# load packages and data
+packages <- c("readr", "MuMIn")                         # packages you will need
+lapply(packages, require, character.only = TRUE)        # install and / or load packages
+dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/understory.csv")))
 ```
 
 ## R Markdown
