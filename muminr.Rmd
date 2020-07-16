@@ -52,20 +52,36 @@ We begin by building a model with all the fixed effects and use county and state
 
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 mod <- lme(diabetesprevalence ~ 
-           smoking + 
+           smoking +
            foodenvironment +
            physicalinactivity +
            accesstoexercise +
            excessivedrinking +
-           drivingalone +
-           population,
+           smoking:foodenvironment +
+           smoking:physicalinactivity +
+           smoking:accesstoexercise +
+           smoking:excessivedrinking +
+           foodenvironment:physicalinactivity +
+           foodenvironment:accesstoexercise +
+           foodenvironment:excessivedrinking +
+           physicalinactivity:accesstoexercise +
+           physicalinactivity:excessivedrinking +
+           accesstoexercise:excessivedrinking,
            random = ~ 1 | state/county, data = dat, method = "ML")
 modfit1 <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
 plot(modfit1, labAsExpr = TRUE)
 av <- model.avg(modfit1, subset = delta < 3)
-mfilnam <- paste(outpath, respname, "_modelavtable.csv", sep = "")
-write.csv(av[2], mfilnam)
 
+
+
+vrs <- data.frame("nam" = as.character("name"))
+vrs$nam <- capture.output(cat(names(coefficients(av)[-1]), sep = " + "))
+vrs$nam <- paste(vrs$nam, ", random = ~ 1 | state/county, data = dat, method='ML'", sep = "")
+bestmod <- eval(parse(text = paste("lme(diabetesprevalence ~ ", vrs$nam, ")")))
+summary(bestmod)
+coef(summary(bestmod))
+r.squaredGLMM(bestmod)
+ptable <- cbind(coef(summary(bestmod)), Anova(bestmod, type = "III"), r.squaredGLMM(bestmod))
 ```
 
 
