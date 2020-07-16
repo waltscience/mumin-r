@@ -30,14 +30,32 @@ Very simply, multi-model inference works by testing all possible combinations of
 
 ## Using multi-model inference in R
 
-I will use data from 
+The package MuMIn has everything needed to perform multi-model inference. To test it out, we can use data from the University of Wisconsin County Health Project.
 
-```{r  include=FALSE}
-# load packages and data
-packages <- c("readr", "MuMIn")                         # packages you will need
+```{r}
+packages <- c("readr", "MuMIn", "lme4")                 # packages you will need
 lapply(packages, require, character.only = TRUE)        # install and / or load packages
-dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/understory.csv")))
+dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/countyhealth/master/healthdata.csv")))
 ```
+
+We will build models testing whether diabetes prevalence in a county is related to the following factors:
+ 
+ * Smoking
+ * Food environment index
+ * Physical inactivity
+ * Access to exercise opportunities
+ * Excessive drinking prevalence
+ * Driving alone to work
+ * Population
+ 
+We begin by building a model with all the fixed effect and use county and state as random effects. We can think of this model as the "global" model.
+
+```{r}
+
+```
+
+
+
 
 ## R Markdown
 
