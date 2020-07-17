@@ -35,8 +35,9 @@ The package MuMIn has everything needed to perform multi-model inference. To tes
 <br>
 
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
-packages <- c("readr", "MuMIn", "lme4")                 # packages you will need
-lapply(packages, require, character.only = TRUE)        # install and / or load packages
+packages <- c("readr", "MuMIn", "nlme", "car")                      # packages you will need
+#lapply(packages, install.packages, character.only = TRUE)          # install packages
+lapply(packages, library, character.only = TRUE)                    # load packages
 dat <- as.data.frame(read_csv(url("https://raw.githubusercontent.com/waltscience/mumin-r/master/healthdata.csv")))
 ```
 
@@ -84,27 +85,51 @@ From the global model, we will use the dredge function to test every model with 
 
 ```{r echo = TRUE, results = 'hide', message = FALSE, warning = FALSE}
 moddredge <- dredge(mod, extra = c("R^2", F = function(x)summary(x)$fstatistic[[1]]))
+```
 
+<br>
 
+We can create a plot showing model variables vs. average model AIC to get a sense of what factors are important. Then create a model average from the models with the lowest AIC. Typically, models are not thought to be different if they are within two AIC units, so the model.avg function creates an average model from models within that range. 
 
+<br>
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+mods2 <- moddredge[which(moddredge$AICc <= min(moddredge$AICc) + 2), ]
+plot(mods2, labAsExpr = TRUE)
+modav <- model.avg(moddredge, subset = delta < 2)
+summary(modav)
+```
+
+<br>
+
+The model averaging computes two models - full average and conditional average. The full average model averages coefficients whether they were included in the candidate model or not. In models without a coefficient, the average will include zeroes. The conditional average model averages coefficients only when they are included in the model.
+
+In both instances, food environment increases diabetes prevalence and the effect is enhaced by smoking. Also, access to exercise opportunities interacts with physical inactivity to increase diabetes prevalence in counties in MD, WV, VA, KY, and OH.
+
+How can we estimate R^2 of an averaged model? There are a variety of pseudo-R^2 values proposed. However, their use is still debated. An alternative practice is to report the range of R^2 values for the candidate models. Since we are using mixed effects models here, the R^2 that is reported is the marginal R^2 - the variance in diabetes prevalence explained by the fixed effects.
+
+<br>
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+range(mods2$'R^2')
+```
+
+<br>
+
+Sometimes it isn't appropriate to average models. In those cases, we can build a final model using the variables that were included in the average models. This model still includes all variables within 2 AIC, however the coefficients will not be averaged. In this case, we can calculate Type III error sums of squares, and get estimates for both R^2^~marginal~ (fixed effects) and R^2^~conditional~ (fixed + random effects).
+
+<br>
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
 vrs <- data.frame("nam" = as.character("name"))
-vrs$nam <- capture.output(cat(names(coefficients(av)[-1]), sep = " + "))
+vrs$nam <- capture.output(cat(names(coefficients(modav)[-1]), sep = " + "))
 vrs$nam <- paste(vrs$nam, ", random = ~ 1 | state/county, data = dat, method='ML'", sep = "")
 bestmod <- eval(parse(text = paste("lme(diabetesprevalence ~ ", vrs$nam, ")")))
 summary(bestmod)
 coef(summary(bestmod))
 r.squaredGLMM(bestmod)
-ptable <- cbind(coef(summary(bestmod)), Anova(bestmod, type = "III"), r.squaredGLMM(bestmod))
+cbind(coef(summary(bestmod)), Anova(bestmod, type = "III"))
 ```
-
-We can create a plot showing model variables vs. average model AIC to get a sense of what factors are important. Then create a model average from the models with the lowest AIC. Typically, models are not thought to be different if they are within three AIC, so the model.avg function creates an average model from models within that range. 
-
-
-```{r}
-plot(moddredge, labAsExpr = TRUE)
-av <- model.avg(moddredge, subset = delta < 3)
-```
-
 
 
 
