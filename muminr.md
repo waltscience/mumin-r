@@ -1,4 +1,4 @@
-A quick guide to using multi-model inference for model selecetion in R
+A quick guide to using multi-model inference for model selection in R
 ================
 
 layout: post image: /images/Electoral\_Map\_States.png summary: Use
