@@ -1,6 +1,15 @@
 A quick guide to using multi-model inference for model selecetion in R
 ================
 
+<style type="text/css">
+}
+.main-container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 layout: post image: /images/Electoral\_Map\_States.png summary: Use
 computing power to choose the best fit model. excerpt: Use computing
 power to choose the best fit model. time: 3 minute read title: A quick
