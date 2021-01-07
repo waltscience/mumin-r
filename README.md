@@ -2,6 +2,6 @@
 Quick guide for using multi-model inference in R
 
 ## Use computing power to choose the best fit model
-### Author: Chris Walter - [Quick guide for using multi-model inference in R](https://chriswalter.info/muminr/)
+### Author: Chris Walter - [Quick guide for using multi-model inference in R](https://waltscienceblog.github.io/muminr/)
 
 Data sources: 
